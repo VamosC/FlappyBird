@@ -1,0 +1,5 @@
+sch2hdl,-sympath,E:/lch/flappybird2/flappybird/flappybird/ipcore_dir,-intstyle,ise,-family,kintex7,-verilog,E:/lch/flappybird2/flappybird/flappybird/DispNum.vf,-w,E:/lch/flappybird2/flappybird/flappybird/DispNum.sch
+sch2hdl,-sympath,E:/lch/flappybird2/flappybird/flappybird/ipcore_dir,-intstyle,ise,-family,kintex7,-verilog,E:/lch/flappybird2/flappybird/flappybird/MyMC14495.vf,-w,E:/lch/MyALU/MyMC14495.sch
+sch2hdl,-sympath,E:/lch/flappybird2/flappybird/flappybird/ipcore_dir,-intstyle,ise,-family,kintex7,-verilog,E:/lch/flappybird2/flappybird/flappybird/MUX4to1.vf,-w,E:/lch/flappybird2/flappybird/flappybird/MUX4to1.sch
+sch2hdl,-sympath,E:/lch/flappybird2/flappybird/flappybird/ipcore_dir,-intstyle,ise,-family,kintex7,-verilog,E:/lch/flappybird2/flappybird/flappybird/DisplaySync.vf,-w,E:/lch/flappybird2/flappybird/flappybird/DisplaySync.sch
+sch2hdl,-sympath,E:/lch/flappybird2/flappybird/flappybird/ipcore_dir,-intstyle,ise,-family,kintex7,-verilog,E:/lch/flappybird2/flappybird/flappybird/Mux4to14b.vf,-w,E:/lch/flappybird2/flappybird/flappybird/Mux4to14b.sch

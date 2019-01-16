@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\lch\flappybird2\flappybird\flappybird\Top.ncd
+OUTFILE=E:\lch\flappybird2\flappybird\flappybird\Top.bit
+FAMILY=Kintex7
+PART=xc7k160t-2lffg676
+WORKINGDIR=E:\lch\flappybird2\flappybird\flappybird
+LICENSE=WebPack
+USER_INFO=__0_0_0

@@ -1,0 +1,32 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Mon Jan 14 16:35:31 2019
+
+drc -z Top.ncd Top.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   h1/gamestart_gameover_AND_2438_o is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   h1/gamestart_gameover_AND_2296_o is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   h1/gamestart_gameover_AND_2369_o is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   h1/gamestart_gameover_AND_2332_o is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   h1/gamestart_gameover_AND_2521_o is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net h1/Mmux_vga_color112 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+DRC detected 0 errors and 6 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

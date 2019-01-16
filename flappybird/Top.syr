@@ -1,0 +1,1651 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top"
+Output Format                      : NGC
+Target Device                      : xc7k160t-2L-ffg676
+
+---- Source Options
+Top Module Name                    : Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\SegmentDecoder.v" into library work
+Parsing module <SegmentDecoder>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\Mux4to14b.vf" into library work
+Parsing module <Mux4to14b>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\MUX4to1.vf" into library work
+Parsing module <MUX4to1>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\MyMC14495.vf" into library work
+Parsing module <MyMC14495>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\ShiftReg.v" into library work
+Parsing module <ShiftReg>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\Seg7Remap.v" into library work
+Parsing module <Seg7Remap>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\Seg7Decode.v" into library work
+Parsing module <Seg7Decode>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\ipcore_dir\start.v" into library work
+Parsing module <start>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\ipcore_dir\pipe4.v" into library work
+Parsing module <pipe4>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\ipcore_dir\pipe3.v" into library work
+Parsing module <pipe3>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\ipcore_dir\final.v" into library work
+Parsing module <final>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\ipcore_dir\bird_2.v" into library work
+Parsing module <bird_2>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\ipcore_dir\bird_1.v" into library work
+Parsing module <bird_1>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\ipcore_dir\background.v" into library work
+Parsing module <background>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\DisplaySync.vf" into library work
+Parsing module <INV4_HXILINX_DisplaySync>.
+Parsing module <MUX4to1_MUSER_DisplaySync>.
+Parsing module <Mux4to14b_MUSER_DisplaySync>.
+Parsing module <DisplaySync>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\clkdiv.v" into library work
+Parsing module <clkdiv>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\AntiJitter.v" into library work
+Parsing module <AntiJitter>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\vgac.v" into library work
+Parsing module <vgac>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\Seg7Device.v" into library work
+Parsing module <Seg7Device>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\Keypad.v" into library work
+Parsing module <Keypad>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\DrawGame.v" into library work
+Parsing module <DrawGame>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\DispNum.vf" into library work
+Parsing module <INV4_HXILINX_DispNum>.
+Parsing module <MUX4to1_MUSER_DispNum>.
+Parsing module <Mux4to14b_MUSER_DispNum>.
+Parsing module <DisplaySync_MUSER_DispNum>.
+Parsing module <DispNum>.
+Analyzing Verilog file "E:\lch\flappybird2\flappybird\flappybird\Top.v" into library work
+Parsing module <Top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "E:\lch\flappybird2\flappybird\flappybird\Top.v" Line 56: Port dbg_keyLine is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:\lch\flappybird2\flappybird\flappybird\Top.v" Line 60: Port segment is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:\lch\flappybird2\flappybird\flappybird\Top.v" Line 75: Port rdn is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:\lch\flappybird2\flappybird\flappybird\Top.v" Line 80: Port points is not connected to this instance
+
+Elaborating module <Top>.
+
+Elaborating module <AntiJitter(WIDTH=4)>.
+
+Elaborating module <Keypad>.
+WARNING:HDLCompiler:1127 - "E:\lch\flappybird2\flappybird\flappybird\Top.v" Line 56: Assignment to keyReady ignored, since the identifier is never used
+
+Elaborating module <Seg7Device>.
+
+Elaborating module <Seg7Decode>.
+
+Elaborating module <SegmentDecoder>.
+
+Elaborating module <Seg7Remap>.
+
+Elaborating module <ShiftReg(WIDTH=64)>.
+
+Elaborating module <vgac>.
+
+Elaborating module <DrawGame>.
+WARNING:HDLCompiler:872 - "E:\lch\flappybird2\flappybird\flappybird\DrawGame.v" Line 15: Using initial value of x1_bird since it is never assigned
+WARNING:HDLCompiler:872 - "E:\lch\flappybird2\flappybird\flappybird\DrawGame.v" Line 16: Using initial value of x2_bird since it is never assigned
+
+Elaborating module <bird_1>.
+WARNING:HDLCompiler:1499 - "E:\lch\flappybird2\flappybird\flappybird\ipcore_dir\bird_1.v" Line 39: Empty module <bird_1> remains a black box.
+
+Elaborating module <bird_2>.
+WARNING:HDLCompiler:1499 - "E:\lch\flappybird2\flappybird\flappybird\ipcore_dir\bird_2.v" Line 39: Empty module <bird_2> remains a black box.
+
+Elaborating module <background>.
+WARNING:HDLCompiler:1499 - "E:\lch\flappybird2\flappybird\flappybird\ipcore_dir\background.v" Line 39: Empty module <background> remains a black box.
+
+Elaborating module <start>.
+WARNING:HDLCompiler:1499 - "E:\lch\flappybird2\flappybird\flappybird\ipcore_dir\start.v" Line 39: Empty module <start> remains a black box.
+
+Elaborating module <pipe3>.
+WARNING:HDLCompiler:1499 - "E:\lch\flappybird2\flappybird\flappybird\ipcore_dir\pipe3.v" Line 39: Empty module <pipe3> remains a black box.
+
+Elaborating module <pipe4>.
+WARNING:HDLCompiler:1499 - "E:\lch\flappybird2\flappybird\flappybird\ipcore_dir\pipe4.v" Line 39: Empty module <pipe4> remains a black box.
+
+Elaborating module <final>.
+WARNING:HDLCompiler:1499 - "E:\lch\flappybird2\flappybird\flappybird\ipcore_dir\final.v" Line 39: Empty module <final> remains a black box.
+WARNING:HDLCompiler:413 - "E:\lch\flappybird2\flappybird\flappybird\DrawGame.v" Line 94: Result of 20-bit expression is truncated to fit in 19-bit target.
+WARNING:HDLCompiler:413 - "E:\lch\flappybird2\flappybird\flappybird\DrawGame.v" Line 126: Result of 32-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "E:\lch\flappybird2\flappybird\flappybird\DrawGame.v" Line 138: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "E:\lch\flappybird2\flappybird\flappybird\DrawGame.v" Line 141: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "E:\lch\flappybird2\flappybird\flappybird\DrawGame.v" Line 147: Result of 32-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "E:\lch\flappybird2\flappybird\flappybird\DrawGame.v" Line 150: Result of 32-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "E:\lch\flappybird2\flappybird\flappybird\DrawGame.v" Line 163: Result of 32-bit expression is truncated to fit in 19-bit target.
+WARNING:HDLCompiler:413 - "E:\lch\flappybird2\flappybird\flappybird\DrawGame.v" Line 165: Result of 32-bit expression is truncated to fit in 19-bit target.
+WARNING:HDLCompiler:413 - "E:\lch\flappybird2\flappybird\flappybird\DrawGame.v" Line 201: Result of 21-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "E:\lch\flappybird2\flappybird\flappybird\DrawGame.v" Line 202: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "E:\lch\flappybird2\flappybird\flappybird\DrawGame.v" Line 220: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\lch\flappybird2\flappybird\flappybird\DrawGame.v" Line 227: Result of 17-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <DispNum>.
+
+Elaborating module <MyMC14495>.
+
+Elaborating module <INV>.
+
+Elaborating module <AND4>.
+
+Elaborating module <AND3>.
+
+Elaborating module <AND2>.
+
+Elaborating module <OR4>.
+
+Elaborating module <OR3>.
+
+Elaborating module <OR2>.
+
+Elaborating module <clkdiv>.
+
+Elaborating module <DisplaySync_MUSER_DispNum>.
+
+Elaborating module <Mux4to14b_MUSER_DispNum>.
+
+Elaborating module <MUX4to1_MUSER_DispNum>.
+
+Elaborating module <INV4_HXILINX_DispNum>.
+
+Elaborating module <ShiftReg(WIDTH=16)>.
+WARNING:HDLCompiler:552 - "E:\lch\flappybird2\flappybird\flappybird\Top.v" Line 80: Input port points[3] is not connected on this instance
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Top>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\Top.v".
+WARNING:Xst:2898 - Port 'points', unconnected in block instance 'm0', is tied to GND.
+WARNING:Xst:2898 - Port 'RST', unconnected in block instance 'm0', is tied to GND.
+WARNING:Xst:647 - Input <rstn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "E:\lch\flappybird2\flappybird\flappybird\Top.v" line 56: Output port <dbg_keyLine> of the instance <k0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\lch\flappybird2\flappybird\flappybird\Top.v" line 56: Output port <ready> of the instance <k0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\lch\flappybird2\flappybird\flappybird\Top.v" line 60: Output port <segment> of the instance <segDevice> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\lch\flappybird2\flappybird\flappybird\Top.v" line 60: Output port <anode> of the instance <segDevice> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\lch\flappybird2\flappybird\flappybird\Top.v" line 75: Output port <rdn> of the instance <v0> is unconnected or connected to loadless signal.
+    Found 32-bit register for signal <clkdiv>.
+    Found 32-bit adder for signal <clkdiv[31]_GND_1_o_add_1_OUT> created at line 48.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <Top> synthesized.
+
+Synthesizing Unit <AntiJitter>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\AntiJitter.v".
+        WIDTH = 4
+    Found 4-bit register for signal <cnt>.
+    Found 1-bit register for signal <O>.
+    Found 4-bit subtractor for signal <cnt[3]_GND_2_o_sub_6_OUT> created at line 39.
+    Found 4-bit adder for signal <cnt[3]_GND_2_o_add_2_OUT> created at line 34.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   5 D-type flip-flop(s).
+Unit <AntiJitter> synthesized.
+
+Synthesizing Unit <Keypad>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\Keypad.v".
+    Found 4-bit register for signal <keyLineX>.
+    Found 1-bit register for signal <state>.
+    Found 5-bit register for signal <keyLineY>.
+    Found 1-bit tristate buffer for signal <keyX<3>> created at line 29
+    Found 1-bit tristate buffer for signal <keyX<2>> created at line 29
+    Found 1-bit tristate buffer for signal <keyX<1>> created at line 29
+    Found 1-bit tristate buffer for signal <keyX<0>> created at line 29
+    Found 1-bit tristate buffer for signal <keyY<4>> created at line 30
+    Found 1-bit tristate buffer for signal <keyY<3>> created at line 30
+    Found 1-bit tristate buffer for signal <keyY<2>> created at line 30
+    Found 1-bit tristate buffer for signal <keyY<1>> created at line 30
+    Found 1-bit tristate buffer for signal <keyY<0>> created at line 30
+    Summary:
+	inferred  10 D-type flip-flop(s).
+	inferred   9 Tristate(s).
+Unit <Keypad> synthesized.
+
+Synthesizing Unit <Seg7Device>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\Seg7Device.v".
+    Found 4x4-bit Read Only RAM for signal <anode>
+    Found 8-bit 4-to-1 multiplexer for signal <segment> created at line 36.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplexer(s).
+Unit <Seg7Device> synthesized.
+
+Synthesizing Unit <Seg7Decode>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\Seg7Decode.v".
+    Summary:
+	no macro.
+Unit <Seg7Decode> synthesized.
+
+Synthesizing Unit <SegmentDecoder>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\SegmentDecoder.v".
+    Found 16x7-bit Read Only RAM for signal <segment>
+    Summary:
+	inferred   1 RAM(s).
+Unit <SegmentDecoder> synthesized.
+
+Synthesizing Unit <Seg7Remap>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\Seg7Remap.v".
+    Summary:
+	no macro.
+Unit <Seg7Remap> synthesized.
+
+Synthesizing Unit <ShiftReg_1>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\ShiftReg.v".
+        WIDTH = 64
+        DELAY = 12
+    Found 1-bit register for signal <oe>.
+    Found 12-bit register for signal <counter>.
+    Found 65-bit register for signal <shift>.
+    Found 12-bit adder for signal <counter[11]_GND_17_o_add_5_OUT> created at line 54.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  78 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <ShiftReg_1> synthesized.
+
+Synthesizing Unit <vgac>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\vgac.v".
+    Found 10-bit register for signal <v_count>.
+    Found 9-bit register for signal <row_addr>.
+    Found 10-bit register for signal <col_addr>.
+    Found 1-bit register for signal <rdn>.
+    Found 1-bit register for signal <hs>.
+    Found 1-bit register for signal <vs>.
+    Found 4-bit register for signal <r>.
+    Found 4-bit register for signal <g>.
+    Found 4-bit register for signal <b>.
+    Found 10-bit register for signal <h_count>.
+    Found 10-bit subtractor for signal <col> created at line 56.
+    Found 10-bit adder for signal <h_count[9]_GND_18_o_add_2_OUT> created at line 38.
+    Found 10-bit adder for signal <v_count[9]_GND_18_o_add_8_OUT> created at line 50.
+    Found 9-bit subtractor for signal <row<8:0>> created at line 55.
+    Found 10-bit comparator greater for signal <h_sync> created at line 57
+    Found 10-bit comparator greater for signal <v_sync> created at line 58
+    Found 10-bit comparator greater for signal <GND_18_o_h_count[9]_LessThan_17_o> created at line 59
+    Found 10-bit comparator greater for signal <h_count[9]_PWR_10_o_LessThan_18_o> created at line 60
+    Found 10-bit comparator greater for signal <GND_18_o_v_count[9]_LessThan_19_o> created at line 61
+    Found 10-bit comparator greater for signal <v_count[9]_PWR_10_o_LessThan_20_o> created at line 62
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  54 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <vgac> synthesized.
+
+Synthesizing Unit <DrawGame>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\DrawGame.v".
+    Found 1-bit register for signal <gameclk>.
+    Found 1-bit register for signal <mode>.
+    Found 11-bit register for signal <Y>.
+    Found 11-bit register for signal <Vy>.
+    Found 32-bit register for signal <score>.
+    Found 11-bit register for signal <pipe_x>.
+    Found 1-bit register for signal <chioce_pipe>.
+    Found 16-bit register for signal <count>.
+    Found 1-bit register for signal <cnt_pipe>.
+    Found 11-bit register for signal <back_x>.
+    Found 32-bit register for signal <freq>.
+    Found 32-bit register for signal <cnt>.
+    Found 12-bit subtractor for signal <GND_19_o_pipe_x[10]_sub_13_OUT> created at line 105.
+    Found 12-bit subtractor for signal <GND_19_o_pipe_x[10]_sub_15_OUT> created at line 105.
+    Found 10-bit subtractor for signal <GND_19_o_GND_19_o_sub_30_OUT> created at line 126.
+    Found 12-bit subtractor for signal <GND_19_o_GND_19_o_sub_42_OUT> created at line 138.
+    Found 11-bit subtractor for signal <Y[10]_GND_19_o_sub_111_OUT> created at line 191.
+    Found 11-bit subtractor for signal <back_x[10]_GND_19_o_sub_144_OUT> created at line 229.
+    Found 11-bit subtractor for signal <pipe_x[10]_GND_19_o_sub_145_OUT> created at line 230.
+    Found 32-bit subtractor for signal <freq[31]_GND_19_o_sub_147_OUT> created at line 231.
+    Found 32-bit adder for signal <cnt[31]_GND_19_o_add_2_OUT> created at line 60.
+    Found 20-bit adder for signal <n0519> created at line 94.
+    Found 32-bit adder for signal <GND_19_o_GND_19_o_add_31_OUT> created at line 126.
+    Found 12-bit adder for signal <n0492> created at line 134.
+    Found 32-bit adder for signal <GND_19_o_GND_19_o_add_43_OUT> created at line 138.
+    Found 12-bit adder for signal <n0499> created at line 145.
+    Found 18-bit adder for signal <n0532> created at line 147.
+    Found 20-bit adder for signal <n0534[19:0]> created at line 165.
+    Found 21-bit adder for signal <n0537> created at line 165.
+    Found 20-bit adder for signal <n0438> created at line 201.
+    Found 11-bit adder for signal <Vy[10]_GND_19_o_add_116_OUT> created at line 202.
+    Found 32-bit adder for signal <score[31]_GND_19_o_add_135_OUT> created at line 219.
+    Found 1-bit adder for signal <cnt_pipe[0]_PWR_12_o_add_136_OUT<0>> created at line 220.
+    Found 16-bit adder for signal <count[15]_GND_19_o_add_140_OUT> created at line 227.
+    Found 14-bit subtractor for signal <GND_19_o_GND_19_o_sub_33_OUT<13:0>> created at line 126.
+    Found 12-bit subtractor for signal <GND_19_o_GND_19_o_sub_45_OUT<11:0>> created at line 138.
+    Found 17-bit subtractor for signal <GND_19_o_GND_19_o_sub_59_OUT<16:0>> created at line 147.
+    Found 19-bit subtractor for signal <GND_19_o_GND_19_o_sub_72_OUT<18:0>> created at line 163.
+    Found 19-bit subtractor for signal <GND_19_o_GND_19_o_sub_76_OUT<18:0>> created at line 165.
+    Found 9x10-bit multiplier for signal <y_count[8]_PWR_12_o_MuLt_8_OUT> created at line 94.
+    Found 32x7-bit multiplier for signal <n0414> created at line 126.
+    Found 32x6-bit multiplier for signal <n0420> created at line 138.
+    Found 9x8-bit multiplier for signal <y_count[8]_PWR_12_o_MuLt_56_OUT> created at line 147.
+    Found 11x11-bit multiplier for signal <n0437> created at line 201.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_start<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <gameover>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_final<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_final<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_final<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_final<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_final<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_final<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_final<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_final<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_final<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_final<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_final<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_final<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_final<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_final<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_2<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_2<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_2<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_2<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_2<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_2<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_2<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_2<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_2<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_2<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_2<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_2<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_1<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_1<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_1<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_1<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_1<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_1<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_1<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_1<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_1<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_1<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_1<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_bird_1<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe3<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_pipe4<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <addr_background<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit comparator greater for signal <n0000> created at line 59
+    Found 32-bit comparator lessequal for signal <n0019> created at line 105
+    Found 32-bit comparator lessequal for signal <n0022> created at line 105
+    Found 11-bit comparator lessequal for signal <n0025> created at line 107
+    Found 11-bit comparator lessequal for signal <n0027> created at line 107
+    Found 11-bit comparator lessequal for signal <n0032> created at line 111
+    Found 11-bit comparator lessequal for signal <n0034> created at line 111
+    Found 11-bit comparator lessequal for signal <n0038> created at line 119
+    Found 11-bit comparator lessequal for signal <n0040> created at line 119
+    Found 9-bit comparator lessequal for signal <n0048> created at line 125
+    Found 9-bit comparator greater for signal <y_count[8]_PWR_12_o_LessThan_27_o> created at line 125
+    Found 10-bit comparator lessequal for signal <n0052> created at line 125
+    Found 10-bit comparator greater for signal <x_count[9]_GND_19_o_LessThan_29_o> created at line 125
+    Found 10-bit comparator lessequal for signal <n0062> created at line 134
+    Found 10-bit comparator greater for signal <x_count[9]_GND_19_o_LessThan_37_o> created at line 134
+    Found 11-bit comparator lessequal for signal <n0066> created at line 134
+    Found 12-bit comparator greater for signal <GND_19_o_BUS_0004_LessThan_40_o> created at line 134
+    Found 11-bit comparator lessequal for signal <n0078> created at line 145
+    Found 12-bit comparator greater for signal <GND_19_o_BUS_0007_LessThan_55_o> created at line 145
+    Found 11-bit comparator lessequal for signal <n0087> created at line 162
+    Found 11-bit comparator lessequal for signal <n0326> created at line 192
+    Found 11-bit comparator greater for signal <GND_19_o_Y[10]_LessThan_114_o> created at line 197
+    Found 11-bit comparator lessequal for signal <n0353> created at line 221
+    Found 32-bit comparator greater for signal <n0356> created at line 224
+    Found 32-bit comparator greater for signal <n0364> created at line 231
+    Summary:
+	inferred   5 Multiplier(s).
+	inferred  26 Adder/Subtractor(s).
+	inferred 160 D-type flip-flop(s).
+	inferred 111 Latch(s).
+	inferred  25 Comparator(s).
+	inferred  42 Multiplexer(s).
+Unit <DrawGame> synthesized.
+
+Synthesizing Unit <DispNum>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\DispNum.vf".
+WARNING:Xst - Value "\0" of property "LOC" is not applicable. List of valid values is "" 
+    Summary:
+	no macro.
+Unit <DispNum> synthesized.
+
+Synthesizing Unit <MyMC14495>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\MyMC14495.vf".
+    Summary:
+	no macro.
+Unit <MyMC14495> synthesized.
+
+Synthesizing Unit <clkdiv>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\clkdiv.v".
+    Found 32-bit register for signal <clkdiv>.
+    Found 32-bit adder for signal <clkdiv[31]_GND_164_o_add_0_OUT> created at line 27.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <clkdiv> synthesized.
+
+Synthesizing Unit <DisplaySync_MUSER_DispNum>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\DispNum.vf".
+    Set property "HU_SET = XLXI_10_0" for instance <XLXI_10>.
+    Summary:
+	no macro.
+Unit <DisplaySync_MUSER_DispNum> synthesized.
+
+Synthesizing Unit <Mux4to14b_MUSER_DispNum>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\DispNum.vf".
+    Summary:
+	no macro.
+Unit <Mux4to14b_MUSER_DispNum> synthesized.
+
+Synthesizing Unit <MUX4to1_MUSER_DispNum>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\DispNum.vf".
+    Summary:
+	no macro.
+Unit <MUX4to1_MUSER_DispNum> synthesized.
+
+Synthesizing Unit <INV4_HXILINX_DispNum>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\DispNum.vf".
+    Summary:
+	no macro.
+Unit <INV4_HXILINX_DispNum> synthesized.
+
+Synthesizing Unit <ShiftReg_2>.
+    Related source file is "E:\lch\flappybird2\flappybird\flappybird\ShiftReg.v".
+        WIDTH = 16
+        DELAY = 12
+    Found 1-bit register for signal <oe>.
+    Found 12-bit register for signal <counter>.
+    Found 17-bit register for signal <shift>.
+    Found 12-bit adder for signal <counter[11]_GND_169_o_add_5_OUT> created at line 54.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  30 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <ShiftReg_2> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 9
+ 16x7-bit single-port Read Only RAM                    : 8
+ 4x4-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 5
+ 10x9-bit multiplier                                   : 1
+ 11x11-bit multiplier                                  : 1
+ 32x6-bit multiplier                                   : 1
+ 32x7-bit multiplier                                   : 1
+ 9x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 51
+ 1-bit adder                                           : 1
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 2
+ 11-bit adder                                          : 1
+ 11-bit subtractor                                     : 3
+ 12-bit adder                                          : 4
+ 12-bit subtractor                                     : 4
+ 14-bit subtractor                                     : 1
+ 16-bit adder                                          : 1
+ 17-bit subtractor                                     : 1
+ 18-bit adder                                          : 1
+ 19-bit subtractor                                     : 1
+ 20-bit adder                                          : 3
+ 21-bit adder                                          : 1
+ 32-bit adder                                          : 6
+ 32-bit subtractor                                     : 1
+ 4-bit addsub                                          : 17
+ 9-bit subtractor                                      : 1
+# Registers                                            : 67
+ 1-bit register                                        : 27
+ 10-bit register                                       : 3
+ 11-bit register                                       : 4
+ 12-bit register                                       : 2
+ 16-bit register                                       : 1
+ 17-bit register                                       : 1
+ 32-bit register                                       : 5
+ 4-bit register                                        : 21
+ 5-bit register                                        : 1
+ 65-bit register                                       : 1
+ 9-bit register                                        : 1
+# Latches                                              : 111
+ 1-bit latch                                           : 111
+# Comparators                                          : 31
+ 10-bit comparator greater                             : 8
+ 10-bit comparator lessequal                           : 2
+ 11-bit comparator greater                             : 1
+ 11-bit comparator lessequal                           : 11
+ 12-bit comparator greater                             : 2
+ 32-bit comparator greater                             : 3
+ 32-bit comparator lessequal                           : 2
+ 9-bit comparator greater                              : 1
+ 9-bit comparator lessequal                            : 1
+# Multiplexers                                         : 46
+ 1-bit 2-to-1 multiplexer                              : 19
+ 10-bit 2-to-1 multiplexer                             : 1
+ 11-bit 2-to-1 multiplexer                             : 10
+ 12-bit 2-to-1 multiplexer                             : 7
+ 16-bit 2-to-1 multiplexer                             : 3
+ 17-bit 2-to-1 multiplexer                             : 1
+ 19-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 2
+ 65-bit 2-to-1 multiplexer                             : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+# Tristates                                            : 9
+ 1-bit tristate buffer                                 : 9
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/bird_1.ngc>.
+Reading core <ipcore_dir/bird_2.ngc>.
+Reading core <ipcore_dir/background.ngc>.
+Reading core <ipcore_dir/start.ngc>.
+Reading core <ipcore_dir/pipe3.ngc>.
+Reading core <ipcore_dir/pipe4.ngc>.
+Reading core <ipcore_dir/final.ngc>.
+Loading core <bird_1> for timing and area information for instance <Rom0>.
+Loading core <bird_2> for timing and area information for instance <Rom1>.
+Loading core <background> for timing and area information for instance <Rom2>.
+Loading core <start> for timing and area information for instance <Rom4>.
+Loading core <pipe3> for timing and area information for instance <Rom6>.
+Loading core <pipe4> for timing and area information for instance <Rom7>.
+Loading core <final> for timing and area information for instance <Rom10>.
+WARNING:Xst:1290 - Hierarchical block <U1> is unconnected in block <segDevice>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <rdyFilter> is unconnected in block <k0>.
+   It will be removed from the design.
+
+Synthesizing (advanced) Unit <AntiJitter>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <AntiJitter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <DrawGame>.
+The following registers are absorbed into counter <cnt_pipe_0>: 1 register on signal <cnt_pipe_0>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+The following registers are absorbed into accumulator <freq>: 1 register on signal <freq>.
+	Multiplier <Mmult_y_count[8]_PWR_12_o_MuLt_56_OUT> in block <DrawGame> and adder/subtractor <Madd_n0532_Madd> in block <DrawGame> are combined into a MAC<Maddsub_y_count[8]_PWR_12_o_MuLt_56_OUT>.
+	The following registers are also absorbed by the MAC: <v0/col_addr> in block <Top>.
+Unit <DrawGame> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Seg7Device>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_anode> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <clkScan>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <anode>         |          |
+    -----------------------------------------------------------------------
+Unit <Seg7Device> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SegmentDecoder>.
+INFO:Xst:3231 - The small RAM <Mram_segment> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <hex>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <segment>       |          |
+    -----------------------------------------------------------------------
+Unit <SegmentDecoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ShiftReg_1>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <ShiftReg_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ShiftReg_2>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <ShiftReg_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Top>.
+The following registers are absorbed into counter <clkdiv>: 1 register on signal <clkdiv>.
+Unit <Top> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clkdiv>.
+The following registers are absorbed into counter <clkdiv>: 1 register on signal <clkdiv>.
+Unit <clkdiv> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vgac>.
+The following registers are absorbed into counter <h_count>: 1 register on signal <h_count>.
+The following registers are absorbed into counter <v_count>: 1 register on signal <v_count>.
+Unit <vgac> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 9
+ 16x7-bit single-port distributed Read Only RAM        : 8
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# MACs                                                 : 1
+ 9x8-to-17-bit MAC                                     : 1
+# Multipliers                                          : 4
+ 10x9-bit multiplier                                   : 1
+ 11x11-bit multiplier                                  : 1
+ 32x6-bit multiplier                                   : 1
+ 32x7-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 25
+ 1-bit adder                                           : 1
+ 10-bit subtractor                                     : 2
+ 11-bit adder                                          : 2
+ 11-bit subtractor                                     : 3
+ 12-bit adder                                          : 3
+ 12-bit subtractor                                     : 4
+ 14-bit adder                                          : 1
+ 14-bit subtractor                                     : 1
+ 16-bit adder                                          : 1
+ 17-bit subtractor                                     : 1
+ 19-bit adder                                          : 3
+ 19-bit subtractor                                     : 1
+ 32-bit adder                                          : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 25
+ 1-bit up counter                                      : 1
+ 10-bit up counter                                     : 2
+ 12-bit up counter                                     : 2
+ 32-bit up counter                                     : 3
+ 4-bit updown counter                                  : 17
+# Accumulators                                         : 1
+ 32-bit down accumulator                               : 1
+# Registers                                            : 240
+ Flip-Flops                                            : 240
+# Comparators                                          : 31
+ 10-bit comparator greater                             : 8
+ 10-bit comparator lessequal                           : 2
+ 11-bit comparator greater                             : 1
+ 11-bit comparator lessequal                           : 11
+ 12-bit comparator greater                             : 2
+ 32-bit comparator greater                             : 3
+ 32-bit comparator lessequal                           : 2
+ 9-bit comparator greater                              : 1
+ 9-bit comparator lessequal                            : 1
+# Multiplexers                                         : 125
+ 1-bit 2-to-1 multiplexer                              : 101
+ 11-bit 2-to-1 multiplexer                             : 10
+ 12-bit 2-to-1 multiplexer                             : 7
+ 16-bit 2-to-1 multiplexer                             : 3
+ 19-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 2
+ 8-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2146 - In block <Top>, Counter <clkdiv> <m0/XLXI_5/clkdiv> are equivalent, XST will keep only <clkdiv>.
+WARNING:Xst:2677 - Node <h1/Mmult_n04141> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <h1/Mmult_n04201> of sequential type is unconnected in block <Top>.
+WARNING:Xst:1293 - FF/Latch <h1/back_x_0> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <h1/freq_0> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <h1/freq_1> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <h1/freq_2> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <h1/Maddsub_y_count[8]_PWR_12_o_MuLt_56_OUT1_0> (without init value) has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <clkdiv_26> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_27> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_28> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_29> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_30> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <clkdiv_31> of sequential type is unconnected in block <Top>.
+INFO:Xst:2261 - The FF/Latch <v0/col_addr_7> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <h1/Maddsub_y_count[8]_PWR_12_o_MuLt_56_OUT1_3> 
+INFO:Xst:2261 - The FF/Latch <v0/col_addr_8> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <h1/Maddsub_y_count[8]_PWR_12_o_MuLt_56_OUT1_2> 
+INFO:Xst:2261 - The FF/Latch <v0/col_addr_9> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <h1/Maddsub_y_count[8]_PWR_12_o_MuLt_56_OUT1_1> 
+INFO:Xst:2261 - The FF/Latch <v0/col_addr_0> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <h1/Maddsub_y_count[8]_PWR_12_o_MuLt_56_OUT1_10> 
+INFO:Xst:2261 - The FF/Latch <v0/col_addr_1> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <h1/Maddsub_y_count[8]_PWR_12_o_MuLt_56_OUT1_9> 
+INFO:Xst:2261 - The FF/Latch <v0/col_addr_2> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <h1/Maddsub_y_count[8]_PWR_12_o_MuLt_56_OUT1_8> 
+INFO:Xst:2261 - The FF/Latch <v0/col_addr_3> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <h1/Maddsub_y_count[8]_PWR_12_o_MuLt_56_OUT1_7> 
+INFO:Xst:2261 - The FF/Latch <v0/col_addr_4> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <h1/Maddsub_y_count[8]_PWR_12_o_MuLt_56_OUT1_6> 
+INFO:Xst:2261 - The FF/Latch <v0/col_addr_5> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <h1/Maddsub_y_count[8]_PWR_12_o_MuLt_56_OUT1_5> 
+INFO:Xst:2261 - The FF/Latch <v0/col_addr_6> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <h1/Maddsub_y_count[8]_PWR_12_o_MuLt_56_OUT1_4> 
+WARNING:Xst:2677 - Node <k0/rdyFilter/cnt_3> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <k0/rdyFilter/cnt_2> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <k0/rdyFilter/cnt_1> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <k0/rdyFilter/cnt_0> of sequential type is unconnected in block <Top>.
+WARNING:Xst:2677 - Node <k0/rdyFilter/O> of sequential type is unconnected in block <Top>.
+
+Optimizing unit <DisplaySync_MUSER_DispNum> ...
+
+Optimizing unit <Mux4to14b_MUSER_DispNum> ...
+
+Optimizing unit <MyMC14495> ...
+
+Optimizing unit <Top> ...
+WARNING:Xst:1293 - FF/Latch <h1/Vy_0> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <h1/pipe_x_0> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <h1/pipe_x_0> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <INV4_HXILINX_DispNum> ...
+
+Optimizing unit <Seg7Device> ...
+
+Optimizing unit <ShiftReg_1> ...
+
+Optimizing unit <ShiftReg_2> ...
+WARNING:Xst:1293 - FF/Latch <h1/freq_23> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <h1/freq_24> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <h1/freq_25> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <h1/freq_26> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <h1/freq_27> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <h1/freq_28> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <h1/freq_29> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <h1/freq_30> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <h1/freq_31> has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <h1/freq_20> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <h1/freq_21> 
+INFO:Xst:2261 - The FF/Latch <h1/back_x_1> in Unit <Top> is equivalent to the following FF/Latch, which will be removed : <h1/cnt_pipe_0> 
+INFO:Xst:3203 - The FF/Latch <h1/freq_20> in Unit <Top> is the opposite to the following FF/Latch, which will be removed : <h1/freq_22> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 420
+ Flip-Flops                                            : 420
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2852
+#      AND2                        : 41
+#      AND3                        : 11
+#      AND4                        : 9
+#      GND                         : 8
+#      INV                         : 76
+#      LUT1                        : 118
+#      LUT2                        : 113
+#      LUT3                        : 198
+#      LUT4                        : 182
+#      LUT5                        : 456
+#      LUT6                        : 931
+#      MUXCY                       : 346
+#      MUXF7                       : 25
+#      OR2                         : 7
+#      OR3                         : 3
+#      OR4                         : 10
+#      VCC                         : 8
+#      XORCY                       : 310
+# FlipFlops/Latches                : 560
+#      FD                          : 48
+#      FDCE                        : 10
+#      FDE                         : 299
+#      FDR                         : 71
+#      FDRE                        : 21
+#      LD                          : 91
+#      LD_1                        : 19
+#      LDE                         : 1
+# RAMS                             : 322
+#      RAMB18E1                    : 13
+#      RAMB36E1                    : 309
+# Clock Buffers                    : 7
+#      BUFG                        : 6
+#      BUFGP                       : 1
+# IO Buffers                       : 60
+#      IBUF                        : 16
+#      IOBUF                       : 9
+#      OBUF                        : 35
+# DSPs                             : 4
+#      DSP48E1                     : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7k160tffg676-2l 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             551  out of  202800     0%  
+ Number of Slice LUTs:                 2074  out of  101400     2%  
+    Number used as Logic:              2074  out of  101400     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2148
+   Number with an unused Flip Flop:    1597  out of   2148    74%  
+   Number with an unused LUT:            74  out of   2148     3%  
+   Number of fully used LUT-FF pairs:   477  out of   2148    22%  
+   Number of unique control sets:        68
+
+IO Utilization: 
+ Number of IOs:                          62
+ Number of bonded IOBs:                  61  out of    400    15%  
+    IOB Flip Flops/Latches:               9
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:              316  out of    325    97%  
+    Number using Block RAM only:        316
+ Number of BUFG/BUFGCTRLs:                7  out of     32    21%  
+ Number of DSP48E1s:                      4  out of    600     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------+------------------------------+-------+
+Clock Signal                                                         | Clock buffer(FF name)        | Load  |
+---------------------------------------------------------------------+------------------------------+-------+
+clkdiv_1                                                             | BUFG                         | 55    |
+clkdiv_25                                                            | NONE(h1/mode_0)              | 1     |
+clk                                                                  | BUFGP                        | 410   |
+h1/gameclk                                                           | BUFG                         | 87    |
+clkdiv_23                                                            | BUFG                         | 21    |
+h1/gamestart_gameover_AND_2438_o(h1/gamestart_gameover_AND_2438_o1:O)| NONE(*)(h1/addr_pipe4_0)     | 17    |
+h1/gamestart_gameover_AND_2369_o(h1/gamestart_gameover_AND_2369_o1:O)| NONE(*)(h1/addr_pipe3_0)     | 17    |
+a0<1>/O                                                              | BUFG                         | 20    |
+h1/Mmux_vga_color112(h1/Mmux_vga_color1121:O)                        | NONE(*)(h1/addr_final_0)     | 14    |
+h1/gamestart_gameover_AND_2521_o(h1/gamestart_gameover_AND_2521_o1:O)| NONE(*)(h1/addr_background_1)| 19    |
+h1/gamestart_gameover_AND_2332_o(h1/gamestart_gameover_AND_2332_o1:O)| NONE(*)(h1/addr_bird_1_0)    | 12    |
+h1/gamestart_gameover_AND_2296_o(h1/gamestart_gameover_AND_2296_o1:O)| NONE(*)(h1/addr_bird_2_0)    | 12    |
+clkdiv_15                                                            | BUFG                         | 90    |
+clkdiv_3                                                             | BUFG                         | 108   |
+---------------------------------------------------------------------+------------------------------+-------+
+(*) These 6 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                                                   | Buffer(FF name)                                                                                                                                   | Load  |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_13103(h1/Rom2/XST_GND:G)                                                                                                                                                     | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B) | 232   |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_1212(h1/Rom4/XST_GND:G)                                                                                                                                                      | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[70].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)    | 184   |
+h1/Rom6/N1(h1/Rom6/XST_GND:G)                                                                                                                                                                                                                                                    | NONE(h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)    | 60    |
+h1/Rom7/N1(h1/Rom7/XST_GND:G)                                                                                                                                                                                                                                                    | NONE(h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)    | 60    |
+h1/Rom10/N1(h1/Rom10/XST_GND:G)                                                                                                                                                                                                                                                  | NONE(h1/Rom10/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)    | 6     |
+h1/Rom0/N1(h1/Rom0/XST_GND:G)                                                                                                                                                                                                                                                    | NONE(h1/Rom0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)     | 2     |
+h1/Rom1/N1(h1/Rom1/XST_GND:G)                                                                                                                                                                                                                                                    | NONE(h1/Rom1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)     | 2     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom6/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/cascadelata_tmp(h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/cascadelatb_tmp(h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(h1/Rom7/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.163ns (Maximum Frequency: 193.676MHz)
+   Minimum input arrival time before clock: 1.277ns
+   Maximum output required time after clock: 6.015ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkdiv_1'
+  Clock period: 3.353ns (frequency: 298.276MHz)
+  Total number of paths / destination ports: 2413 / 95
+-------------------------------------------------------------------------
+Delay:               3.353ns (Levels of Logic = 10)
+  Source:            v0/row_addr_1 (FF)
+  Destination:       v0/b_0 (FF)
+  Source Clock:      clkdiv_1 rising
+  Destination Clock: clkdiv_1 rising
+
+  Data Path: v0/row_addr_1 to v0/b_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              17   0.236   0.612  v0/row_addr_1 (v0/row_addr_1)
+     LUT4:I0->O            0   0.043   0.000  h1/Mcompar_GND_19_o_BUS_0004_LessThan_40_o_lutdi (h1/Mcompar_GND_19_o_BUS_0004_LessThan_40_o_lutdi)
+     MUXCY:DI->O           1   0.228   0.000  h1/Mcompar_GND_19_o_BUS_0004_LessThan_40_o_cy<0> (h1/Mcompar_GND_19_o_BUS_0004_LessThan_40_o_cy<0>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Mcompar_GND_19_o_BUS_0004_LessThan_40_o_cy<1> (h1/Mcompar_GND_19_o_BUS_0004_LessThan_40_o_cy<1>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Mcompar_GND_19_o_BUS_0004_LessThan_40_o_cy<2> (h1/Mcompar_GND_19_o_BUS_0004_LessThan_40_o_cy<2>)
+     MUXCY:CI->O           1   0.151   0.350  h1/Mcompar_GND_19_o_BUS_0004_LessThan_40_o_cy<3> (h1/Mcompar_GND_19_o_BUS_0004_LessThan_40_o_cy<3>)
+     LUT4:I3->O            1   0.043   0.350  h1/Mcompar_GND_19_o_BUS_0004_LessThan_40_o_cy<4>_SW0 (N93)
+     LUT6:I5->O            1   0.043   0.350  h1/Mcompar_GND_19_o_BUS_0004_LessThan_40_o_cy<4> (h1/Mcompar_GND_19_o_BUS_0004_LessThan_40_o_cy<4>)
+     LUT6:I5->O           17   0.043   0.440  h1/GND_19_o_GND_19_o_AND_1158_o (h1/GND_19_o_GND_19_o_AND_1158_o)
+     LUT5:I4->O            1   0.043   0.350  h1/Mmux_vga_color113 (h1/Mmux_vga_color113)
+     LUT6:I5->O            1   0.043   0.000  h1/Mmux_vga_color114 (vga_data<8>)
+     FDR:D                    -0.000          v0/b_0
+    ----------------------------------------
+    Total                      3.353ns (0.899ns logic, 2.453ns route)
+                                       (26.8% logic, 73.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkdiv_25'
+  Clock period: 1.046ns (frequency: 955.566MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.046ns (Levels of Logic = 1)
+  Source:            h1/mode_0 (FF)
+  Destination:       h1/mode_0 (FF)
+  Source Clock:      clkdiv_25 rising
+  Destination Clock: clkdiv_25 rising
+
+  Data Path: h1/mode_0 to h1/mode_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             15   0.236   0.417  h1/mode_0 (h1/mode_0)
+     INV:I->O              1   0.054   0.339  h1/mode[0]_INV_55_o1_INV_0 (h1/mode[0]_INV_55_o)
+     FDE:D                    -0.000          h1/mode_0
+    ----------------------------------------
+    Total                      1.046ns (0.290ns logic, 0.757ns route)
+                                       (27.7% logic, 72.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.503ns (frequency: 399.491MHz)
+  Total number of paths / destination ports: 2662 / 92
+-------------------------------------------------------------------------
+Delay:               2.503ns (Levels of Logic = 17)
+  Source:            h1/cnt_2 (FF)
+  Destination:       h1/cnt_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: h1/cnt_2 to h1/cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.236   0.534  h1/cnt_2 (h1/cnt_2)
+     LUT4:I0->O            1   0.043   0.000  h1/Mcompar_n0000_lut<1> (h1/Mcompar_n0000_lut<1>)
+     MUXCY:S->O            1   0.238   0.000  h1/Mcompar_n0000_cy<1> (h1/Mcompar_n0000_cy<1>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Mcompar_n0000_cy<2> (h1/Mcompar_n0000_cy<2>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Mcompar_n0000_cy<3> (h1/Mcompar_n0000_cy<3>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Mcompar_n0000_cy<4> (h1/Mcompar_n0000_cy<4>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Mcompar_n0000_cy<5> (h1/Mcompar_n0000_cy<5>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Mcompar_n0000_cy<6> (h1/Mcompar_n0000_cy<6>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Mcompar_n0000_cy<7> (h1/Mcompar_n0000_cy<7>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Mcompar_n0000_cy<8> (h1/Mcompar_n0000_cy<8>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Mcompar_n0000_cy<9> (h1/Mcompar_n0000_cy<9>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Mcompar_n0000_cy<10> (h1/Mcompar_n0000_cy<10>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Mcompar_n0000_cy<11> (h1/Mcompar_n0000_cy<11>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Mcompar_n0000_cy<12> (h1/Mcompar_n0000_cy<12>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Mcompar_n0000_cy<13> (h1/Mcompar_n0000_cy<13>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Mcompar_n0000_cy<14> (h1/Mcompar_n0000_cy<14>)
+     MUXCY:CI->O           1   0.151   0.339  h1/Mcompar_n0000_cy<15> (h1/Mcompar_n0000_cy<15>)
+     INV:I->O             33   0.054   0.469  h1/Mcompar_n0000_cy<15>_inv1_INV_0 (h1/n0000)
+     FDR:R                     0.264          h1/cnt_0
+    ----------------------------------------
+    Total                      2.503ns (1.161ns logic, 1.342ns route)
+                                       (46.4% logic, 53.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'h1/gameclk'
+  Clock period: 2.522ns (frequency: 396.534MHz)
+  Total number of paths / destination ports: 1893 / 106
+-------------------------------------------------------------------------
+Delay:               2.522ns (Levels of Logic = 5)
+  Source:            h1/freq_20 (FF)
+  Destination:       h1/freq_3 (FF)
+  Source Clock:      h1/gameclk rising
+  Destination Clock: h1/gameclk rising
+
+  Data Path: h1/freq_20 to h1/freq_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.236   0.362  h1/freq_20 (h1/freq_20)
+     INV:I->O              2   0.054   0.344  h1/freq<20>_inv1_INV_0 (h1/freq<20>_inv)
+     MUXCY:DI->O           1   0.228   0.000  h1/Mcompar_n0364_cy<2> (h1/Mcompar_n0364_cy<2>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Mcompar_n0364_cy<3> (h1/Mcompar_n0364_cy<3>)
+     MUXCY:CI->O           1   0.150   0.495  h1/Mcompar_n0364_cy<4> (h1/Mcompar_n0364_cy<4>)
+     LUT4:I1->O           18   0.043   0.434  h1/_n0650_inv1 (h1/_n0650_inv)
+     FDE:CE                    0.161          h1/freq_3
+    ----------------------------------------
+    Total                      2.522ns (0.886ns logic, 1.636ns route)
+                                       (35.1% logic, 64.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkdiv_23'
+  Clock period: 5.163ns (frequency: 193.676MHz)
+  Total number of paths / destination ports: 3120 / 32
+-------------------------------------------------------------------------
+Delay:               5.163ns (Levels of Logic = 15)
+  Source:            h1/Vy_3 (FF)
+  Destination:       h1/Y_10 (FF)
+  Source Clock:      clkdiv_23 rising
+  Destination Clock: clkdiv_23 rising
+
+  Data Path: h1/Vy_3 to h1/Y_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             9   0.236   0.395  h1/Vy_3 (h1/Vy_3)
+     LUT4:I3->O            2   0.043   0.344  h1/Mmux_n054151 (h1/Madd_Vy[10]_GND_19_o_add_116_OUT_lut<3>)
+     DSP48E1:A3->P2        1   2.737   0.350  h1/Mmult_n0437 (h1/n0437<2>)
+     LUT5:I4->O            1   0.043   0.000  h1/Madd_n0438_Madd_lut<0> (h1/Madd_n0438_Madd_lut<0>)
+     MUXCY:S->O            1   0.238   0.000  h1/Madd_n0438_Madd_cy<0> (h1/Madd_n0438_Madd_cy<0>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Madd_n0438_Madd_cy<1> (h1/Madd_n0438_Madd_cy<1>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Madd_n0438_Madd_cy<2> (h1/Madd_n0438_Madd_cy<2>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Madd_n0438_Madd_cy<3> (h1/Madd_n0438_Madd_cy<3>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Madd_n0438_Madd_cy<4> (h1/Madd_n0438_Madd_cy<4>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Madd_n0438_Madd_cy<5> (h1/Madd_n0438_Madd_cy<5>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Madd_n0438_Madd_cy<6> (h1/Madd_n0438_Madd_cy<6>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Madd_n0438_Madd_cy<7> (h1/Madd_n0438_Madd_cy<7>)
+     MUXCY:CI->O           1   0.013   0.000  h1/Madd_n0438_Madd_cy<8> (h1/Madd_n0438_Madd_cy<8>)
+     MUXCY:CI->O           0   0.013   0.000  h1/Madd_n0438_Madd_cy<9> (h1/Madd_n0438_Madd_cy<9>)
+     XORCY:CI->O           1   0.262   0.350  h1/Madd_n0438_Madd_xor<10> (h1/n0438<10>)
+     LUT5:I4->O            1   0.043   0.000  h1/Mmux_Y[10]_GND_19_o_mux_121_OUT25 (h1/Y[10]_GND_19_o_mux_121_OUT<10>)
+     FDRE:D                   -0.000          h1/Y_10
+    ----------------------------------------
+    Total                      5.163ns (3.724ns logic, 1.440ns route)
+                                       (72.1% logic, 27.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkdiv_15'
+  Clock period: 1.433ns (frequency: 697.691MHz)
+  Total number of paths / destination ports: 570 / 170
+-------------------------------------------------------------------------
+Delay:               1.433ns (Levels of Logic = 1)
+  Source:            a0<15>/cnt_0 (FF)
+  Destination:       a0<15>/cnt_0 (FF)
+  Source Clock:      clkdiv_15 rising
+  Destination Clock: clkdiv_15 rising
+
+  Data Path: a0<15>/cnt_0 to a0<15>/cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              7   0.236   0.637  a0<15>/cnt_0 (a0<15>/cnt_0)
+     LUT5:I0->O            4   0.043   0.356  a0<15>/_n0031_inv1 (a0<15>/_n0031_inv)
+     FDE:CE                    0.161          a0<15>/cnt_0
+    ----------------------------------------
+    Total                      1.433ns (0.440ns logic, 0.993ns route)
+                                       (30.7% logic, 69.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkdiv_3'
+  Clock period: 2.637ns (frequency: 379.204MHz)
+  Total number of paths / destination ports: 11148 / 216
+-------------------------------------------------------------------------
+Delay:               2.637ns (Levels of Logic = 3)
+  Source:            ledDevice/shift_7 (FF)
+  Destination:       ledDevice/shift_16 (FF)
+  Source Clock:      clkdiv_3 rising
+  Destination Clock: clkdiv_3 rising
+
+  Data Path: ledDevice/shift_7 to ledDevice/shift_16
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.236   0.618  ledDevice/shift_7 (ledDevice/shift_7)
+     LUT6:I0->O            2   0.043   0.618  ledDevice/out11 (ledDevice/out1)
+     LUT6:I0->O           18   0.043   0.445  ledDevice/out13 (ledDevice/sckEn)
+     LUT3:I2->O           17   0.043   0.429  ledDevice/_n0033_inv1 (ledDevice/_n0033_inv)
+     FDE:CE                    0.161          ledDevice/shift_0
+    ----------------------------------------
+    Total                      2.637ns (0.526ns logic, 2.111ns route)
+                                       (19.9% logic, 80.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clkdiv_15'
+  Total number of paths / destination ports: 153 / 153
+-------------------------------------------------------------------------
+Offset:              1.277ns (Levels of Logic = 2)
+  Source:            SW<15> (PAD)
+  Destination:       a0<15>/O (FF)
+  Destination Clock: clkdiv_15 rising
+
+  Data Path: SW<15> to a0<15>/O
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.000   0.631  SW_15_IBUF (SW_15_IBUF)
+     LUT5:I0->O            1   0.043   0.339  a0<15>/_n00231 (a0<15>/_n0023)
+     FDR:R                     0.264          a0<15>/O
+    ----------------------------------------
+    Total                      1.277ns (0.307ns logic, 0.970ns route)
+                                       (24.0% logic, 76.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clkdiv_1'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              0.575ns (Levels of Logic = 1)
+  Source:            v0/r_3 (FF)
+  Destination:       r<3> (PAD)
+  Source Clock:      clkdiv_1 rising
+
+  Data Path: v0/r_3 to r<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.236   0.339  v0/r_3 (v0/r_3)
+     OBUF:I->O                 0.000          r_3_OBUF (r<3>)
+    ----------------------------------------
+    Total                      0.575ns (0.236ns logic, 0.339ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 762 / 14
+-------------------------------------------------------------------------
+Offset:              6.015ns (Levels of Logic = 9)
+  Source:            clkdiv_17 (FF)
+  Destination:       SEGMENT<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: clkdiv_17 to SEGMENT<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              13   0.236   0.407  clkdiv_17 (clkdiv_17)
+     INV:I->O              2   0.317   0.608  m0/XLXI_6/XLXI_1/XLXI_6 (m0/XLXI_6/XLXI_1/XLXN_4)
+     AND2:I1->O            4   0.053   0.620  m0/XLXI_6/XLXI_1/XLXI_3 (m0/XLXI_6/XLXI_1/XLXN_25)
+     AND2:I1->O            1   0.053   0.603  m0/XLXI_6/XLXI_1/XLXI_18 (m0/XLXI_6/XLXI_1/XLXN_62)
+     OR4:I1->O            11   0.053   0.395  m0/XLXI_6/XLXI_1/XLXI_40 (m0/XLXN_9<1>)
+     INV:I->O              8   0.317   0.561  m0/XLXI_2/XLXI_3 (m0/XLXI_2/XLXN_96)
+     AND4:I2->O            2   0.134   0.500  m0/XLXI_2/XLXI_5 (m0/XLXI_2/XLXN_98)
+     OR4:I3->O             1   0.161   0.603  m0/XLXI_2/XLXI_80 (m0/XLXI_2/XLXN_119)
+     OR2:I1->O             1   0.053   0.339  m0/XLXI_2/XLXI_88 (SEGMENT_0_OBUF)
+     OBUF:I->O                 0.000          SEGMENT_0_OBUF (SEGMENT<0>)
+    ----------------------------------------
+    Total                      6.015ns (1.377ns logic, 4.638ns route)
+                                       (22.9% logic, 77.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'h1/gameclk'
+  Total number of paths / destination ports: 344 / 7
+-------------------------------------------------------------------------
+Offset:              4.624ns (Levels of Logic = 7)
+  Source:            h1/count_13 (FF)
+  Destination:       SEGMENT<5> (PAD)
+  Source Clock:      h1/gameclk rising
+
+  Data Path: h1/count_13 to SEGMENT<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.236   0.625  h1/count_13 (h1/count_13)
+     AND2:I0->O            1   0.043   0.613  m0/XLXI_6/XLXI_1/XLXI_19 (m0/XLXI_6/XLXI_1/XLXN_63)
+     OR4:I0->O            11   0.043   0.395  m0/XLXI_6/XLXI_1/XLXI_40 (m0/XLXN_9<1>)
+     INV:I->O              8   0.317   0.561  m0/XLXI_2/XLXI_3 (m0/XLXI_2/XLXN_96)
+     AND4:I2->O            2   0.134   0.500  m0/XLXI_2/XLXI_5 (m0/XLXI_2/XLXN_98)
+     OR4:I3->O             1   0.161   0.603  m0/XLXI_2/XLXI_80 (m0/XLXI_2/XLXN_119)
+     OR2:I1->O             1   0.053   0.339  m0/XLXI_2/XLXI_88 (SEGMENT_0_OBUF)
+     OBUF:I->O                 0.000          SEGMENT_0_OBUF (SEGMENT<0>)
+    ----------------------------------------
+    Total                      4.624ns (0.987ns logic, 3.637ns route)
+                                       (21.3% logic, 78.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clkdiv_15'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              1.069ns (Levels of Logic = 2)
+  Source:            k0/state (FF)
+  Destination:       BTN_Y<3> (PAD)
+  Source Clock:      clkdiv_15 rising
+
+  Data Path: k0/state to BTN_Y<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              11   0.236   0.395  k0/state (k0/state)
+     INV:I->O              9   0.054   0.384  k0/state_inv1_INV_0 (k0/state_inv)
+     IOBUF:T->IO               0.000          BTN_Y_3_IOBUF (BTN_Y<3>)
+    ----------------------------------------
+    Total                      1.069ns (0.290ns logic, 0.779ns route)
+                                       (27.1% logic, 72.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clkdiv_3'
+  Total number of paths / destination ports: 84 / 6
+-------------------------------------------------------------------------
+Offset:              2.386ns (Levels of Logic = 4)
+  Source:            ledDevice/shift_7 (FF)
+  Destination:       LED_CLK (PAD)
+  Source Clock:      clkdiv_3 rising
+
+  Data Path: ledDevice/shift_7 to LED_CLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.236   0.618  ledDevice/shift_7 (ledDevice/shift_7)
+     LUT6:I0->O            2   0.043   0.618  ledDevice/out11 (ledDevice/out1)
+     LUT6:I0->O           18   0.043   0.445  ledDevice/out13 (ledDevice/sckEn)
+     LUT2:I1->O            1   0.043   0.339  ledDevice/sck1 (LED_CLK_OBUF)
+     OBUF:I->O                 0.000          LED_CLK_OBUF (LED_CLK)
+    ----------------------------------------
+    Total                      2.386ns (0.365ns logic, 2.021ns route)
+                                       (15.3% logic, 84.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock a0<1>/O
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkdiv_1       |    2.249|         |         |         |
+clkdiv_15      |         |         |    2.118|         |
+clkdiv_23      |         |         |    3.826|         |
+h1/gameclk     |         |         |    3.542|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+--------------------------------+---------+---------+---------+---------+
+                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------+---------+---------+---------+---------+
+a0<1>/O                         |    2.688|         |         |         |
+clk                             |    2.503|         |         |         |
+h1/Mmux_vga_color112            |         |    1.563|         |         |
+h1/gameclk                      |    2.750|         |         |         |
+h1/gamestart_gameover_AND_2296_o|         |    1.090|         |         |
+h1/gamestart_gameover_AND_2332_o|         |    1.090|         |         |
+h1/gamestart_gameover_AND_2369_o|         |    1.784|         |         |
+h1/gamestart_gameover_AND_2438_o|         |    1.784|         |         |
+h1/gamestart_gameover_AND_2521_o|         |    1.804|         |         |
+--------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clkdiv_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+a0<1>/O        |         |    1.775|         |         |
+clk            |    5.158|         |         |         |
+clkdiv_1       |    3.353|         |         |         |
+clkdiv_15      |    2.333|         |         |         |
+clkdiv_23      |    4.555|         |         |         |
+clkdiv_25      |    1.245|         |         |         |
+h1/gameclk     |    4.063|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clkdiv_15
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkdiv_15      |    1.433|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clkdiv_23
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+a0<1>/O        |         |    3.119|         |         |
+clkdiv_15      |    6.279|         |         |         |
+clkdiv_23      |    5.163|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clkdiv_25
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkdiv_15      |    1.168|         |         |         |
+clkdiv_25      |    1.046|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clkdiv_3
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkdiv_15      |    0.813|         |         |         |
+clkdiv_3       |    2.637|         |         |         |
+h1/gameclk     |    0.927|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock h1/Mmux_vga_color112
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkdiv_1       |         |         |    6.104|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock h1/gameclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+a0<1>/O        |         |    2.242|         |         |
+clkdiv_15      |    3.088|         |         |         |
+h1/gameclk     |    2.522|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock h1/gamestart_gameover_AND_2296_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkdiv_1       |         |         |    5.968|         |
+clkdiv_23      |         |         |    5.933|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock h1/gamestart_gameover_AND_2332_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkdiv_1       |         |         |    5.968|         |
+clkdiv_23      |         |         |    5.933|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock h1/gamestart_gameover_AND_2369_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkdiv_1       |         |         |    4.753|         |
+h1/gameclk     |         |         |    1.397|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock h1/gamestart_gameover_AND_2438_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkdiv_1       |         |         |    4.753|         |
+h1/gameclk     |         |         |    1.397|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock h1/gamestart_gameover_AND_2521_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkdiv_1       |         |         |    3.306|         |
+h1/gameclk     |         |         |    3.112|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 119.00 secs
+Total CPU time to Xst completion: 119.20 secs
+ 
+--> 
+
+Total memory usage is 4715928 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  174 (   0 filtered)
+Number of infos    :   23 (   0 filtered)
+
